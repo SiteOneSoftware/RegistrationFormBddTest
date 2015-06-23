@@ -19,6 +19,9 @@ Scenario: User signs up with valid details
 	Then I redirected to the home page 
 	And I will be logged in 
 
+@Browser:IE
+@Browser:Firefox
+@Browser:Chrome
 Scenario: User signs up with differing passwords 
 	Given I am on the home page 
 	And I am not logged in 

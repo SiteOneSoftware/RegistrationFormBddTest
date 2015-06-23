@@ -45,7 +45,17 @@ namespace RegistrationForm.Tests.Acceptance.Pages
         internal BasePage SubmitForm()
         {
             SubmitButton.Click();
-            return GetInstance<IndexPage>(Driver);
+            BasePage returnPage;
+            try
+            {
+                returnPage = GetInstance<IndexPage>(Driver);
+            }
+            catch
+            {
+                returnPage = GetInstance<RegistrationPage>();
+            }
+
+            return returnPage;
         }
     }
 }

@@ -134,16 +134,23 @@ this.ScenarioSetup(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("User signs up with differing passwords")]
-        public virtual void UserSignsUpWithDifferingPasswords()
+        [NUnit.Framework.TestCaseAttribute("IE", Category="IE", TestName="UserSignsUpWithDifferingPasswords on IE")]
+        [NUnit.Framework.TestCaseAttribute("Firefox", Category="Firefox", TestName="UserSignsUpWithDifferingPasswords on Firefox")]
+        [NUnit.Framework.TestCaseAttribute("Chrome", Category="Chrome", TestName="UserSignsUpWithDifferingPasswords on Chrome")]
+        public virtual void UserSignsUpWithDifferingPasswords(string browser)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User signs up with differing passwords", ((string[])(null)));
-#line 22
-this.ScenarioSetup(scenarioInfo);
-#line 23
- testRunner.Given("I am on the home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 24
- testRunner.And("I am not logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+            InitializeSelenium(browser);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User signs up with differing passwords", new string[] {
+                        "Browser:IE",
+                        "Browser:Firefox",
+                        "Browser:Chrome"});
 #line 25
+this.ScenarioSetup(scenarioInfo);
+#line 26
+ testRunner.Given("I am on the home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 27
+ testRunner.And("I am not logged in", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 28
  testRunner.When("I click the register button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -158,11 +165,11 @@ this.ScenarioSetup(scenarioInfo);
             table2.AddRow(new string[] {
                         "ConfirmPassword",
                         "Pasword1!"});
-#line 26
+#line 29
  testRunner.And("fill in the registration form with the following details", ((string)(null)), table2, "And ");
-#line 31
+#line 34
  testRunner.And("I submit the form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 32
+#line 35
  testRunner.Then("I will see the message the password and password confirmation do not match", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

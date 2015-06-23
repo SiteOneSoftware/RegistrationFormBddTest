@@ -59,5 +59,10 @@ namespace RegistrationForm.Tests.Acceptance
         {
             return GetInstance<TPage>(driver ?? Driver, BaseURL, expectedTitle);
         }
+
+        public bool IsTextOnPage(string text)
+        {
+            return Driver.PageSource.Contains(text);
+        }
     }
 }

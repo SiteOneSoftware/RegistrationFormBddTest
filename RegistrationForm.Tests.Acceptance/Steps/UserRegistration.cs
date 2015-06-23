@@ -54,5 +54,11 @@ namespace RegistrationForm.Tests.Acceptance.Steps
         {
             CurrentPage.As<IndexPage>().IsLogoutButtonAvailable();
         }
+
+        [Then(@"I will see the message (.*)")]
+        public void ThenIWillSeeTheMessage(string message)
+        {
+            CurrentPage.IsTextOnPage(message);
+        }
     }
 }
