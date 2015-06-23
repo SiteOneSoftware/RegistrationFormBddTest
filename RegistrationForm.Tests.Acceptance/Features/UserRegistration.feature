@@ -4,6 +4,8 @@ As a Guest user
 I want to register a new account 
 
 @Browser:IE
+@Browser:Firefox
+@Browser:Chrome
 Scenario: User signs up with valid details 
 	Given I am on the home page 
 	And I am not logged in 
