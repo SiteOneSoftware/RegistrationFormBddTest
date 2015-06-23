@@ -15,6 +15,11 @@ namespace RegistrationForm.Tests.Acceptance
     {
         protected IWebDriver CurrentDriver { get; set; }
 
+        internal int RandomNumber()
+        {
+            return new Random(DateTime.Now.Second + DateTime.Now.Minute).Next(1, 9999);
+        }
+
         [SetUp]
         public void Test_Setup()
         {

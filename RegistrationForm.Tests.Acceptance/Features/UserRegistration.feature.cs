@@ -112,14 +112,14 @@ this.ScenarioSetup(scenarioInfo);
                         "field",
                         "value"});
             table1.AddRow(new string[] {
-                        "UserName",
-                        "Jonesm"});
+                        "Email",
+                        "Jonesm@test.com"});
             table1.AddRow(new string[] {
                         "Password",
-                        "password1"});
+                        "Password1!"});
             table1.AddRow(new string[] {
                         "ConfirmPassword",
-                        "password1"});
+                        "Password1!"});
 #line 13
  testRunner.And("fill in the registration form with the following details", ((string)(null)), table1, "And ");
 #line 18
@@ -150,14 +150,14 @@ this.ScenarioSetup(scenarioInfo);
                         "field",
                         "value"});
             table2.AddRow(new string[] {
-                        "UserName",
-                        "Jonesm"});
+                        "Email",
+                        "Jonesm@test.com"});
             table2.AddRow(new string[] {
                         "Password",
-                        "password1"});
+                        "Password1!"});
             table2.AddRow(new string[] {
                         "ConfirmPassword",
-                        "pasword1"});
+                        "Pasword1!"});
 #line 26
  testRunner.And("fill in the registration form with the following details", ((string)(null)), table2, "And ");
 #line 31

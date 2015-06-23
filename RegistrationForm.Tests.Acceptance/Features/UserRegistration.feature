@@ -12,9 +12,9 @@ Scenario: User signs up with valid details
 	When I click the register button 
 	And fill in the registration form with the following details 
 		| field | value | 
-		| UserName | Jonesm | 
-		| Password | password1 | 
-		| ConfirmPassword | password1 | 
+		| Email | Jonesm@test.com | 
+		| Password | Password1! | 
+		| ConfirmPassword | Password1! | 
 	And I submit the form 
 	Then I redirected to the home page 
 	And I will be logged in 
@@ -25,8 +25,8 @@ Scenario: User signs up with differing passwords
 	When I click the register button 
 	And fill in the registration form with the following details 
 		| field | value | 
-		| UserName | Jonesm | 
-		| Password | password1 | 
-		| ConfirmPassword | pasword1 | 
+		| Email | Jonesm@test.com | 
+		| Password | Password1! | 
+		| ConfirmPassword | Pasword1! | 
 	And I submit the form 
 	Then I will see the message the password and password confirmation do not match
