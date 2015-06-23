@@ -46,7 +46,7 @@ namespace RegistrationForm.Tests.Acceptance.Pages
                 throw new Exception("Unable to find the logout button on the page");
             }
 
-            Assert.AreEqual("log off", LogoutButton.Text);  
+            Assert.AreEqual("Log off", LogoutButton.Text);  
         }
     }
 }
